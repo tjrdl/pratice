@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script>
+        $(function () {
+            // jquery 스타일을 변수로 처리
+            var style_1={
+                "background-color":"#0ff",
+                "border":"2px solid #f00"
+            }
+            var style_2={
+                "background-color":"#ff0",
+                "border":"2px dashed #0ff"
+            }
+
+            // $(".txt").css(style_1);
+
+            // .prev() : 이전 요소 선택
+            // $(".txt").prev().css(style_1);
+
+            // +는 다음 요소(다음 요소로 p가 없으면 찾지못함)
+            // $(".txt + p").css(style_2);
+            // $(".txt + h3").css(style_2);
+
+            // .next() : 갯수만큼 다음 요소 선택
+            //$(".txt").next().next().css(style_2);
+            
+            // .prevAll() : 이전 요소 모두 선택
+            //$(".txt").prevAll().css(style_1);
+            
+            // .nextAll() : 다음 요소 모두 선택
+            //$(".txt").nextAll().css(style_2);
+            
+            // siblings() : 자신을 제외한 형제들 선택
+            // $(".txt").siblings().css(style_1);
+
+            // prevUntil() : .txt3 부터 .title 전까지 이전 적용
+            // $(".txt3").prevUntil(".title").css(style_1);
+
+            // nextUntil() : .txt3 부터 .txt6 전까지 적용
+            $(".txt3").nextUntil(".txt6").css(style_1);
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="title">선택자</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p class="txt3">내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+        <p class="txt6">내용6</p>
+    </div>
+</body>
+
+</html>

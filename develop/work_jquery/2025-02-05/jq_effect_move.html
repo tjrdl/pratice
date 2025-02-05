@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/work_jquery/js/jquery.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .btnWrap {
+            margin-bottom: 10px;
+        }
+
+        .wrap {
+            max-width: 600px;
+            border: 1px solid black;
+            
+        }
+
+        .txt1,
+        .txt2 {
+            background-color: aqua;
+            width: fit-content;
+            text-align: center;
+        }
+
+        .txt2 {
+            background-color: orange;
+        }
+    </style>
+    <script>
+        $(function () {
+            var txt1 = $(".txt1");
+            var count = 1;
+
+            $(".btnWrap button").on("click", function () {
+                // txt1.animate({marginLeft:"+=10%"});
+
+                // txt1이 애니메이션 중이면 작동하지 않음 (연속클릭 방지)
+                if(!txt1.is(":animated")) {
+
+                // back 버튼일때 
+                if ($(this).hasClass("backBtn")) {
+                    count--;
+                    if(count < 1) {
+                        count = 10;
+                        return txt1.css({marginLeft:"90%"});
+                    }
+                    txt1.animate({ marginLeft: "-=10%" });
+                
+                }
+                // go 버튼일때 
+                else {
+                    count++;
+                    if(count>10) {
+                        count=1;
+                        return txt1.css({marginLeft:"0%"});
+                    }
+                    txt1.animate({ marginLeft: "+=10%" });
+                }
+            }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <p class="btnWrap">
+        <button class="backBtn">Back</button>
+        <button class="goBtn">Go</button>
+    </p>
+    <div class="wrap">
+        <p class="txt1">content1</p>
+    </div>
+</body>
+
+</html>

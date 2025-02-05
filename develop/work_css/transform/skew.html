@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin {
+            border: 1px solid black;
+            margin: 40px;
+        }
+        .skewx:hover {
+            /* x축으로 30도 비틀기 */
+            transform: skewX(30deg);
+        }
+        .skewy:hover {
+            /* y축으로 15도 비틀기 */
+            transform: skewY(15deg);
+        }
+        .skewz:hover {
+            /* x,y 축으로 15도 25도 비틀기 */
+            transform: skew(-15deg, -25deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="origin">
+        <div class="skewx">
+            <img src="../images/rose.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="skewy">
+            <img src="../images/rose.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="skewz">
+            <img src="../images/rose.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>

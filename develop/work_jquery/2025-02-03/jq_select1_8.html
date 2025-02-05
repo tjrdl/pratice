@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script>
+        $(function () {
+            // // 전체("*") 스타일에(.css) 테두리 적용
+            // $("*").css("border","1px solid aqua");
+
+            // // .css().css() => 2개 이상 스타일 적용
+            // $("#tit").css("background-color","#ff0").css("border","2px solid #f12");
+
+            //  // 클래스 적용
+            //  $(".tit").css("background-color","#ff0").css("border","2px dashed #f12");
+
+            //   // 태그 적용
+            // $("h2").css("background-color","#f582").css("border","2px dashed #ff3ff6");
+
+            // // ,로 구분해 아이디, 클래스, 태그 동시선언 가능
+            // $(".tit, #tit3, h1").css("background-color","#f582").css("border","2px dashed #ff3ff6");
+
+            // // 해당 태그의 아이디 적용
+            // $("h2#aaa").css("background-color","#f582").css("border","2px dashed #ff3ff6").css("width","auto").css("max-width","150px");
+
+            // // .parent() : 부모(상위)요소 => ul 요소에 적용
+            // // 현재 부모인 ul의 범위만큼 테두리 표시
+            // $("#list_1").parent().css("border","2px dashed #f00").css("width","fit-content");
+
+            // // *.1번형식
+            // $("#wrap").css("background-color","yellow").css("border","1px solid black");
+            
+            // *.2번형식
+            // $("#wrap").css({"background-color":"yellow","border":"2px solid blue"});
+            
+            // wrap 아이디에 있는 모든 h1 하위 요소가 대상(이름, 손자 등등)
+            $("#wrap h1").css({"background-color":"yellow","border":"2px solid blue","width":"fit-content"});
+        }); 
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <section>
+            <h1>하위 요소 선택자</h1>
+            <p>내용2</p>
+        </section>
+    </div>
+</body>
+
+</html>

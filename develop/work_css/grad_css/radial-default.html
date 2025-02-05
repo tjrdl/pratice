@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            border-radius: 12px;
+        }
+        .grad {
+            /* 흰색 - 노란색 - 빨간색 / 타원형 그라데이션 */
+            background: radial-gradient(white,yellow,red);
+         }
+
+         .grad2 {
+            /* 흰 - 노 - 빨 - 파 / 원형 그라데이션 */
+            background:  radial-gradient(circle, white,yellow,red,blue);
+         }
+    </style>
+</head>
+<body>
+    <div class="grad"></div>
+    <div class="grad2"></div>
+</body>
+</html>

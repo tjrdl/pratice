@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //object 객체 생성 / a는 참조 변수
+        var a = new Object();
+        //color 속성에 흰색을 부여
+        a.color="white";
+        //price 속성에 30만을 부여
+        a.price=300000;
+        //메소드 구현(a 객체에 메소드 구현)
+        a.info=function() {
+            document.write("tv 색상: ");
+            document.write(this.color);
+            document.write("<br>");
+            document.write("tv 가격: "+this.price);
+            document.write("<br>");
+            //this는 자기자신의 객체 - this.color = a.color
+        }
+
+        var b = {
+            //b객체의 속성
+            color:"black",
+            price:5000000,
+            //b 객체의 메소드 구현현
+            info:function() {
+                document.write("car color: " +this.color+"<br>");
+                document.write("car price: " +this.price+"<br>");
+            }
+
+
+        }
+
+        document.write("<h1> a 객체 메소드 호출.</h1>");
+        //메소드 호출
+        a.info();
+        b.info();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

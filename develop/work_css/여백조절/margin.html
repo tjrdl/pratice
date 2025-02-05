@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: #0094ff;
+        }
+        .box1 {
+            /* 위, 오른쪽, 아래, 왼쪽 / 위에서 부터 정방향 */
+            /* margin: 30px 50px 30px 50;px */
+            margin: 30px 50px 30px 50px;            
+        }
+        .box2 {
+            /* 마진율이 서로 겹치는 경우 각 30씩 적용이 아닌 합쳐서 30으로 적용됨
+                30 + 30 = 60이 아닌 15 + 15 = 30 */
+            margin: 30px 50px;            
+        }
+        .box3 {
+            /* 마진율이 box2의 아래부분은 30, box3의 윗부분은 50이다 이 때,
+                마진율은 큰 쪽을 따라가게 된다. */
+            margin: 50px;
+        }
+        .box4 {
+            margin: 30px 50px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>

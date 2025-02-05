@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+
+        <fieldset>
+            <legend>신청자</legend>
+            <ul>
+                <li style="list-style: none;">
+                    이름
+                    <!-- autofocus 창에 들어갔을 때 자동 포커스 -->
+                     <!-- required 필수값 -->
+                    <input type="text" autofocus required placeholder="정재윤"><br>
+                    학번
+                    <input type="text" placeholder="20193355" maxlength="8">
+                </li>
+
+                <li>
+                    학과
+                    <!-- size, multiple: 다중선택택-->
+                    <select >
+                        <!-- select option의 value 값은 서버가 들고 간다.
+                             즉 건축공학과 선택시 서버에 전송되는 정보는 archi-->
+                        <!-- selected 초기값 설정 / 기본적으로 첫번째 항목 선택됨됨-->
+                        <optgroup label="공과과">
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                    </optgroup>
+                    <optgroup label="인문">
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                        <option value="archi">건축공학과</option>
+                        <option value="com" selected>컴퓨터공학과</option>
+                        <option value="nur">간호학과</option>
+                    </optgroup>
+                    </select> <br>
+                </li>
+                
+            </ul>
+        </fieldset>
+
+
+    </form>
+</body>
+</html>

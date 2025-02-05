@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>상품 주문서</h2>
+    <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+            <li>이름
+                <input type="text" placeholder="여백 없이 입력력" required>
+            </li>
+            <li>연락처
+                <input type="text" placeholder="연락가능한 번호호">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>
+            배송지 정보
+        </legend>
+        <ul>
+            <li>주소 <br>
+            <input type="text" size="50" required>
+        </li>
+
+        <li>
+            전화번호 <input type="text" required>
+        </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>주문 정보</legend>
+        <ul>
+            <li>
+                <input type="checkbox" value="0">과테밀라 안티구아 <small>(100g)</small>
+                <input type="number" min="0" max="100" value="0">개
+            </li>
+            <li>
+                <input type="checkbox" value="0" >인도네시아 만델링링 <small>(100g)</small>
+                <input type="number" min="0" max="100" value="0">개
+            </li>
+            <li>
+                <input type="checkbox" value="0" >팀라는도다(블렌딩) <small>(100g)</small>
+                <input type="number" min="0" max="100" value="0">개
+            </li>
+        </ul>
+    </fieldset>
+    <input type="submit" value="주문하기">
+    <input type="reset" value="다시 작성">
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <!-- fieldset 테두리 박스 -->
+            <legend>개인 정보</legend>
+            <ul>
+                <label>
+                    <li style="list-style: none;">이름<input type="text"></li>
+                </label>
+
+                <li style="list-style: none;">
+                    <!-- for 속성값과 id 속성값이 동일해야 올바르게 동작 -->
+                    <label for="1">
+                        이름
+                    </label>
+                    <input type="text" id="1">
+                </li>
+
+                <li style="list-style: none;">
+                    메일 주소
+                    <input type="text">
+                    
+                </li>
+                
+            
+            </ul>
+        </fieldset>
+    <form>
+        <fieldset>
+            <!-- fieldset 테두리 박스 -->
+            <legend>로그인 정보</legend>
+            <ul>
+                <label>
+                    <li style="list-style: none;">아이디 <input type="text"></li>
+                </label>
+
+                <li style="list-style: none;">
+                    비밀번호
+                    <input type="password">
+                </li>
+                
+            
+            </ul>
+        </fieldset>
+    </form>
+</body>
+
+</html>

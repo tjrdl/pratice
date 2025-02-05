@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var user_Email = prompt("enter your email");
+        var arr_Url = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+        var check1 = false;
+        var check2 = false;
+
+        if (user_Email.indexOf("@") > 0) {
+            check1 = true;
+            document.write("c1 true ");
+        }
+
+        //추가학습
+        for (var i = 0; i < arr_Url.length; i++) {
+            if (user_Email.indexOf(arr_Url[i]) > 2) {
+                check2 = true;
+                document.write(arr_Url[i])
+                break;
+            }
+        }
+
+
+        if (check1 && check2) {
+            document.write(user_Email);
+        }
+        else {
+            alert("wrong email");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

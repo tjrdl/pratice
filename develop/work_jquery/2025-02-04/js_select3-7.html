@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    
+    <script>
+        $(function () {
+            $("#box_wrap").css("background-color","red").css("width","fit-content");
+            var $txt1 = $(".txt_1 span");
+            var $txt2 = $(".txt_2 span");
+            var $box = $(".box");
+
+            var pos_t = $box.position().top;
+            var off_t = $box.offset().top;
+
+            $txt1.text(pos_t);
+
+            $txt2.text(off_t);
+
+            
+        })
+    </script>
+</head>
+
+<body>
+    <div id="box_wrap">
+        <p class="box">box</p>
+
+    </div>
+    <p class="txt_1">상대 top <span></span> </p>
+    <p class="txt_2">절대 top <span></span> </p>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var greenArr = ["교대", "방배", "강남"];
+        var yellowArr = ["미금", "오리", "죽전"];
+
+        // splice: 추가할 인덱스 위치, 삭제할 갯수 / 인덱스 2에서부터 1개를 삭제하고 서초, 역삼 추가
+        greenArr.splice(2, 1, "서초", "역삼");
+        console.log(greenArr);
+
+        // pop: stack-pop first in - last out
+        var data_1 = yellowArr.pop();
+        console.log(yellowArr);
+        console.log(data_1);
+
+        // shift: shift를 통해 data_2에 값을 저장 / 미금 값을 저장받음
+        var data_2 = yellowArr.shift();
+        console.log(yellowArr);
+        console.log(data_2);
+        
+        // push: 마지막 인덱스에 값 삽입
+        yellowArr.push(data_2);
+        // unshift: 가장 앞의 인덱스에 값 삽입
+        yellowArr.unshift(data_1);
+        console.log(yellowArr);
+        
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

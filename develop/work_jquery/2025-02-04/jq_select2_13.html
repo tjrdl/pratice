@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script>
+        $(function () {
+            // contains(content1) : 내용1을 포함하는 요소
+            $("#inner_1 p:contains(content1)").css({ "background": "yellow" });
+
+            // has(strong): strong을 포함하는 요소
+            $("#inner_1 p:has(strong)").css({ "background": "cyan" });
+
+            // contents() : 자식 요소들만 선택( 손자 제외 )
+            $("#outer_wrap").contents().css({ "border": "1px dashed black" });
+
+            // not(":first") : 첫번째가 아닌 것
+            $("#inner_2 p").not(":first").css({"background-color":"lightgray"});
+            
+
+            $("#inner_2 p").eq(2).css({"background-color":"red"});
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h1>contains(), contents(), has()</h1>
+            <p><span>content1</span></p>
+            <p><strong>content2</strong></p>
+            <p><span>content3</span></p>
+        </section>
+        <section id="inner_2">
+            <h1>not(), end()</h1>
+            <p><span>content4</span></p>
+            <p><strong>content5</strong></p>
+            <p><span>content6</span></p>
+        </section>
+    </div>
+
+</body>
+
+</html>

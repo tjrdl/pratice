@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/work_jquery/js/jquery.js"></script>
+    <script>
+        $(function () {
+            // keydown : 모든 키를 눌렀을 때 발생하는 이벤트트
+            $(document).on("keydown",keyEvent);
+
+            // params의 e 는 event의 약자
+            function keyEvent(e) {
+                //alert("7777");
+                // keyCode : 키마다 있는 코드 (아스키 코드?)
+                // alert(e.keyCode);
+                var direct = "";
+                switch (e.keyCode) {
+                    case 37:
+                        direct = "LEFT";
+                        break;
+                    case 38:
+                        direct = "TOP";
+                        break;
+                    case 39:
+                        direct = "RIGHT";
+                        break;
+                    case 40:
+                        direct = "BOTTOM";
+                        break;
+                
+                    default:
+                        break;
+                }
+                // if(direct)
+                $("#user_id").val(direct);
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <input type="text" name="user_id" id="user_id" >
+    </p>
+</body>
+
+</html>

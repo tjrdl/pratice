@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin {
+            border: 1px solid black;
+            margin: 40px;
+        }
+        .movex:hover {
+            /* 오른쪽으로 50px 만큼 이동 */
+            /* transform: translateX(50px); */
+
+            /* 왼쪽으로 50px 만큼 이동동 */
+            transform: translateX(-50px);
+        }
+        .movey:hover {
+            /* 아래로 50px 만큼 이동 */
+            /* transform: translateY(50px); */
+
+            /* 위로 50px 만큼 이동 */
+            transform: translateY(-50px);
+        }
+        .movez:hover {
+            /* 오른쪽으로 10px 아래로 20px 만큼 이동동 */
+            /* transform: translate(10px,20px); */
+            
+            /* 왼쪽으로 10px 위로 20px 만큼 이동 */
+            transform: translate(-10px,-20px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="origin">
+        <div class="movex">
+            <img src="../images/bus.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="movey">
+            <img src="../images/bus.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="movez">
+            <img src="../images/bus.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

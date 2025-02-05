@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //date 객체 생성 - today 참조 변수
+        var today = new Date();
+        //getMonth() 메서드 값을 month 변수로 저장
+        var month = today.getMonth() + 1;
+        var date = today.getDate();
+        var day = today.getDay();
+        // 새 배열을 day_array로 받음
+        var day_array = new Array();
+        day_array = ["일", "월", "화", "수", "목", "금", "토"];
+
+        //date 객체를 set_date 변수가 가리킴
+        var set_date = new Date(2002,12,30);
+        var set_date_month = set_date.getMonth()+1;
+
+        // if (day == 1) {
+        //     document.write("월요일");
+        // }
+        // else if (day == 2) {
+        //     document.write("화요일");
+        // }
+        // else if (day == 3) {
+        //     document.write("수요일");
+        // }
+        // else if (day == 4) {
+        //     document.write("목요일");
+        // }
+        // else if (day == 5) {
+        //     document.write("금요일");
+        // }
+        // else if (day == 6) {
+        //     document.write("토요일");
+        // }
+        // else if (day == 0) {
+        //     document.write("일요일");
+        // }
+        // else {
+        //     document.write("요일을 불러오는 중 오류 발생");
+        //     location.reload();
+        // }
+        //month+=1;
+        //컴퓨터 내에서 월은 0~11까지다.
+        document.writeln("now month: " + month + "<br>");
+        document.writeln("now date: " + date + "<br>");
+        document.writeln("now day: " + day_array[day] + "<br>");
+        document.writeln(month + "월 " + date + "일 ", "<br>");
+        //today 정보를 한번에 출력
+        document.writeln("TODAY: " + today + "<br>");
+        document.writeln("set_date: " + set_date_month + "<br>");
+        document.writeln("set_date: " + set_date.getMonth() + "<br>");
+        document.writeln("set_date: " + day_array[set_date.getDay()] + "<br>");
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

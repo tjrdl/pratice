@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script>
+        $(function () {
+           
+            // closest("div") : 가장 가까운 div 요소 선택
+            // $(".txt1").closest("div").css("border", "2px solid cyan").css("width", "fit-content");
+            
+            // div 2개, body, html 요소 선택
+            // $(".txt1").parents().css("border", "2px dashed #f00").css("width", "fit-content");
+            
+            //div 2개 요소 선택
+            // $(".txt1").parents("div").css("border", "2px dashed #f00").css("width", "fit-content");
+            
+            // body 요소 선택
+            // $(".txt1").parents("body").css("border", "2px dashed #f00").css("width", "fit-content");
+            
+            // html 요소 선택
+            $(".txt1").parents("html").css("border", "2px dashed #f00").css("width", "fit-content");
+
+            
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 class="title">선택자</h1>
+        <div>
+            <p class="txt1">content</p>
+        </div>
+    </div>
+</body>
+
+</html>

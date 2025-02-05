@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 960px;
+            margin: 0px auto;
+
+        }
+
+        .navi {
+            height: 60px;
+            border: 2px solid #ccc;
+        }
+
+        .navi ul {
+            list-style-type: none;
+            padding-top: 10px auto;
+        }
+
+        .navi ul li {
+            width: 150px;
+            padding: 10px auto;
+            display: inline-block;
+        }
+
+        /* 방문하지 않은, 방문한 링크크 */
+        .navi a:link, .navi a:visited {
+            font-size: 14px;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        /* 마우스를 올리거나, 포커스를 받았을 때 */
+        .navi a:hover,
+        .navi a:focus {
+            background-color: lightgoldenrodyellow;
+            color:aquamarine;
+        }
+
+        .navi  a:active {
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="#">information</a></li>
+                <li><a href="#">room introuduce</a></li>
+                <li><a href="#">how to</a></li>
+                <li><a href="#">reservation</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

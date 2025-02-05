@@ -1,0 +1,11 @@
+h1 {
+    color: aquamarine;
+}
+
+p {
+    /* em = 알파벳 대문자 M이 기준 1 */
+    font-size: 1.3em;
+    color: cadetblue;
+    /* 줄간격으로 숫자가 커질수록 넓어짐 */
+    line-height: 2.0;
+}

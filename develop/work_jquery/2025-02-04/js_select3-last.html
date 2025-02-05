@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+
+    <script>
+        $(function () {
+
+            // unwrap : 부모 요소가 삭제된다.
+            $("strong").unwrap();
+
+            // wrap : 해당 요소로 각각 감싼다.
+            $(".ct1").wrap("<div/>");
+            
+            // wrapAll : 해당 요소로 한번에 감싼다.
+            $(".ct2").wrapAll("<div/>");
+
+            // wrapInner : 해당 요소의 내용을 감싼다.
+            $("li").wrapInner("<h3/>");
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>
+        <strong>객체 조작 및 생성</strong>
+    </h1>
+    <p class="ct1">content1</p>
+    <p class="ct1">content2</p>
+    <p class="ct2">content3</p>
+    <p class="ct2">content4</p>
+
+    <ul>
+        <li>content5</li>
+        <li>content6</li>
+    </ul>
+
+</body>
+
+</html>

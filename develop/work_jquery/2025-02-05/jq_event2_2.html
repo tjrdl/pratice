@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/work_jquery/js/jquery.js"></script>
+    <script>
+        $(function () {
+            // data : text에 jquery 설정
+            // mouseover : 마우스를 올렸을 때 외부함수 호출
+            //$("#btn1").data({"text1":"jquery"}).on({"mouseover":overFnc});
+            
+            // mouseout : 마우스가 벗어났을 때 외부함수 호출출
+            $("#btn1").data({"text1":"jquery"}).on({"mouseover":overFnc, "mouseout":outFnc});
+            $("#btn2").data({"text1":"welcome!"}).on({"mouseover":overFnc, "mouseout":outFnc});
+
+            function overFnc() {
+                // 해당 객체에 text 내용 넣기
+                $(".txt").text($(this).data("text1"));
+            }
+
+            function outFnc() {
+                
+                $(".txt").text("");
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <button id="btn1">buttton1</button>
+    </p>
+    <p>
+        <button id="btn2">buttton2</button>
+    </p>
+    <p class="txt"></p>
+</body>
+
+</html>

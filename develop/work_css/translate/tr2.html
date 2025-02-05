@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            padding-bottom: 50px;
+        }
+        h1{
+            text-align: center;
+            font-size: 52px;
+
+        }
+        .tr1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+            transition-property: background-color, transform, width, height;
+            /* 배경 색 2초, 변형 3초, 너비 2초, 높이 3초  */
+            /* transition-duration: 2s,3s,2s,3s; */
+
+            /* 걸리는 시간이 위와 같음음 */
+            transition-duration: 2s,3s;
+        }
+        .tr1:hover {
+            width: 200px;
+            height: 200px;
+            background: #ff635f;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="tr1">
+        <h1>!</h1>
+    </div>
+</body>
+</html>

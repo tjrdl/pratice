@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/work_jquery/js/jquery.js"></script>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: #f9f9f9;
+        }
+        div {
+            width: 100%;
+            height: auto;
+            background-color: royalblue;
+            color: white;
+            text-align: center;
+            margin: 0px auto;
+            padding: 10px;
+        }
+        form {
+            display: none;
+            background-color: white;
+            margin: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 1px 1px 5px 1px gray;
+            
+        }
+        form.active {
+           display: block;
+        }
+        form input {
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            height: 15px;
+            border-radius: 5px 5px;
+            
+        }
+        form input[type=submit]
+        {
+            margin-top: 10px;
+            padding: 10px 10px 30px 20px;
+            width: 93%;
+            height: 30px;
+            color: white;
+            background-color: royalblue;
+            text-align: center;
+            border: 0px;
+            border-radius: 5px 5px;
+        }
+        #none, .none {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('.nav-link').click(function (e) {
+                // 모든 섹션 숨기기
+                $('form').removeClass('active');
+
+                // 클릭한 메뉴에 해당하는 섹션 표시
+                const target = $(this).data('section');
+                $('#' + target).addClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h2>온라인 서점점</h2>
+    </div>
+
+    <a href="#" class="nav-link" data-section="login">login</a>
+    <a href="#" class="nav-link" data-section="member">member</a>
+    <a href="#" class="nav-link" data-section="book">move</a>
+    <a href="#" class="nav-link" data-section="search">move</a>
+    
+    <form action="" id="login" class="active" >
+            <h3>로그인</h3>
+            아이디
+            <br>
+            <input type="text" placeholder="아이디를 입력하세요">
+            <br>
+            비밀번호
+            <br>
+            <input type="password" placeholder="비밀번호를 입력하세요">
+            <br>
+            <input type="submit" value="로그인">
+        </form>
+
+    <form action="" id="member">
+        <h3>회원 정보</h3>
+        이름
+        <br>
+        <input type="text" placeholder="이름을 입력하세요">
+        <br>
+        이메일
+        <br>
+        <input type="email" placeholder="이메일을 입력하세요">
+        <br>
+        전화번호
+        <br>
+        <input type="text" placeholder="전화번호를 입력하세요">
+        <br>
+        <input type="submit" value="정보 수정">
+        <br>
+    </form>
+    <form action="" id="book">
+        <h3>도서 등록</h3>
+        도서 제목
+        <br>
+        <input type="text" placeholder="도서 제목목을 입력하세요">
+        <br>
+        저자
+        <br>
+        <input type="text" placeholder="저자을 입력하세요">
+        <br>
+        ISBN
+        <br>
+        <input type="text" placeholder="ISBN을 입력하세요">
+        <br>
+
+        <input type="submit" value="요리 등록">
+    </form>
+
+    <form action="" id="search">
+        <h3>도서 검색</h3>
+        검색어
+        <br>
+        <input type="text" placeholder="도서 제목 또는 저자를 입력">
+        <br>
+        <button type="submit">검색</button>
+    </form>
+    <br>
+    <div>
+        &copy; 2025 온라인 서점
+    </div>
+</body>
+</html>

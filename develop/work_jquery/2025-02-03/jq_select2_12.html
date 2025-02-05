@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script>
+        $(function () {
+            // 숨겨진 요소가 display를 사용해서 보이게됨
+            
+            $("#wrap p:hidden").css("display","block").css("background-color","#ff0");
+            
+            // 아무겂도 없음
+            // var z1 = $("#zone1").val();
+
+            //스페이스 구분
+            // selected 된 값
+            var z1 = $("#zone1 :selected").val();
+            console.log(z1);
+
+            // checked 된 값
+            var z2 = $("#zone2 :checked").val();
+            console.log(z2);
+
+            var z3 = $("#zone3 :checked").val();
+            console.log(z3)
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p>내용1</p>
+        <p style="display: none;">내용2</p>
+        <p>내용3</p>
+    </div>
+    <form action="#" method="post">
+        <p id="zone1">
+            <select name="course" id="course">
+                <option value="opt1">option1</option>
+                <option value="opt2" selected>option2</option>
+                <option value="opt3">option3</option>
+            </select>
+        </p>
+        <p id="zone2">
+            <input type="checkbox" name="hobby1" value="read">read
+            <input type="checkbox" name="hobby2" value="ride">ride
+            <input type="checkbox" name="hobby3" value="hiking" checked>hiking
+        </p>
+        <p id="zone3">
+            <input type="radio" name="gender" value="male">male
+            <input type="radio" name="gender" value="female" checked>female
+        </p>
+    </form>
+
+</body>
+
+</html>

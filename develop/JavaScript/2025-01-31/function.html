@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count = 0;
+
+        //호이스팅 기능 사용
+        myFnc();
+        
+        //일반 함수
+        function myFnc() {
+            count++;
+            document.write("hello "+count+"<br>");
+        }
+        myFnc();
+        
+        //호이스팅 안됨
+        theFnc();
+        
+        //익명 함수
+        var theFnc = function() {
+            count++;
+            document.write("bye "+count+"<br>");
+        }
+
+        theFnc();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

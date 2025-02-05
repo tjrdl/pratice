@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h1>컴퓨터 가위,바위,보 맞추기</h1>");
+        var game = prompt("가위,바위,보 중 선택하세요", "가위");
+        var game_Num;
+
+        //1~3
+        var Random_Num = Math.floor(Math.random() * 3) + 1;
+
+        switch (game) {
+            case "가위":
+                game_Num = 1;
+                document.write("<img src='../images/math_img_"+game_Num+".jpg'>");
+                break;
+
+            case "바위":
+                game_Num = 2;
+                document.write("<img src='../images/math_img_"+game_Num+".jpg'>");
+                break;
+
+            case "보":
+                game_Num = 3;
+                document.write("<img src='../images/math_img_"+game_Num+".jpg'>");
+                break;
+
+            default:
+                alert("잘못된 입력입니다.");
+                location.reload();
+                break;
+        }
+
+        document.write("<img src='../images/math_img_"+Random_Num+".jpg'>");
+        if (game_Num == Random_Num) {
+            document.write("<img src='../images/game_1.jpg'");
+        }
+        else {
+            document.write("<img src='../images/game_2.jpg'");
+        }
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var right_ID = "korea";
+        var right_PW = "1234";
+        var userID = prompt("enter your ID","");
+        var userPW = prompt("enter your PW","");
+        
+        //일반함수 - 호이스팅 사용
+        login(userID,userPW);
+
+        //호출하는 매개변수명과 함수의 매개변수명이 달라도 문제 없음음
+        function login(id,pw) {
+            this.id = userID;
+            this.pw = userPW;
+
+            if(id == right_ID) {
+                alert("right ID");
+                if (pw == right_PW) {
+                    alert("right PW");
+                    document.write(id+"님 방문을 환영합니다.");
+                }
+                else {
+                    alert("wrong PW");
+                }
+            }
+            else {
+                alert ("wrong ID");
+            }
+        }
+        // login1();
+
+        // //호출하는 매개변수명과 함수의 매개변수명이 달라도 문제 없음음
+        // function login1() {
+        //     this.id = userID;
+        //     this.pw = userPW;
+
+        //     if(id == right_ID) {
+        //         alert("right ID");
+        //         if (pw == right_PW) {
+        //             alert("right PW");
+        //             document.write(id+"님 방문을 환영합니다.");
+        //         }
+        //         else {
+        //             alert("wrong PW");
+        //         }
+        //     }
+        //     else {
+        //         alert ("wrong ID");
+        //     }
+        // }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

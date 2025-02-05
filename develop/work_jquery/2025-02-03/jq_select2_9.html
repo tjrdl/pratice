@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script>
+        $(function () {
+
+            var arr1 = ["seoul", "busan", "jeon-ju","Dae-gu"];
+            var arr2 = ["korea", "america", "japan","china"];
+
+            // 데이터 흐름
+            // 자바 getter, setter
+
+            // xml 데이터 주고받기 -> 태그(열기/닫기): 단점 ex)server.xml=>context태그
+            // =>(ex><aaa>1</aaa><bbb>2</bbb>>)
+
+            // JSON 데어터(키와 값으로 구성)
+            // "aaa":"1","bbb":"2"
+            var obj = {"name":"정부장","area":"seoul"};
+
+            // isArray() : 배열이면 참, 아니면 거짓 리턴
+            var okArray1 = $.isArray(arr1);
+            var okArray2 = $.isArray(obj);
+
+            console.log(okArray1);
+            console.log(okArray2);
+
+            // inArray() : 배열의 값을 가지고 인덱스를 구함
+            // busan과 일치하는 값을 가진 인덱스를 구함함
+            var idxNUm = $.inArray("busan",arr1);
+            console.log(idxNUm);
+
+            // merge() : arr2에 arr1을 붙임임
+            $.merge(arr2,arr1);
+            console.log(arr2);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+
+    </ul>
+</body>
+
+</html>

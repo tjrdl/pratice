@@ -1,0 +1,23 @@
+https://github.com/tjrdl/exam_html.git
+
+git status - 커밋될 목록 보여주는거?
+git add / git add . (한 번에 여러 파일 추가)
+git commit
+git push
+git reset - 상태 초기화
+
+git config --global user.email "tjrdlchlrh00@gmail.com"
+git config --global user.name "tjrdl"
+
+연결
+git init
+git remote add origin '깃헙주소'
+
+커밋
+git add .
+git commit -m "텍스트"
+git push origin 브랜치이름
+
+브랜치
+git branch -M 브랜치이름
+git push origin 브랜치이름

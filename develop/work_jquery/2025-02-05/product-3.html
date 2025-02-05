@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/work_jquery/js/jquery.js"></script>
+    <style>
+        .form1 {
+            width: 800px;
+            height: 100%;
+
+
+            margin: 10px auto;
+            padding: 10px;
+            background-color: white;
+
+        }
+
+        .form1 input[type=submit] {
+            margin-top: 10px;
+            padding: 10px 10px 30px 20px;
+            width: 713px;
+            height: 30px;
+            color: white;
+            background-color: orange;
+            text-align: center;
+            border: 0px;
+            border-radius: 5px 5px;
+        }
+
+        .form1 input[type=text] {
+            width: 700px;
+            margin: 10px 0px 10px 0px;
+            padding: 5px;
+            height: 25px;
+            border-radius: 5px 5px;
+        }
+
+        .form1 input[type=password] {
+            width: 700px;
+            margin: 10px 0px 10px 0px;
+            padding: 5px;
+            height: 25px;
+            border-radius: 5px 5px;
+        }
+
+        .form1 input[type=email] {
+            width: 700px;
+            margin: 10px 0px 10px 0px;
+            padding: 5px;
+            height: 25px;
+            border-radius: 5px 5px;
+        }
+
+        /* div {
+            background-color: burlywood;
+            text-align: center;
+            color: white;
+            width: 100%;
+            height: 50px;
+            margin: 10px;
+            padding: 10px;
+        } */
+    </style>
+
+    <script>
+        $(function () {
+            $("#login").show();
+            $("#register").hide();
+            $("#product_register").hide();
+            $("#market_register").hide();
+
+            $("#login_btn").on("click", function () {
+                $("#login").show();
+                $("#register").hide();
+                $("#product_register").hide();
+                $("#market_register").hide();
+            })
+            $("#register_btn").on("click", function () {
+                $("#login").hide();
+                $("#register").show();
+                $("#product_register").hide();
+                $("#market_register").hide();
+            })
+            $("#product_btn").on("click", function () {
+                $("#login").hide();
+                $("#register").hide();
+                $("#product_register").show();
+                $("#market_register").hide();
+            })
+            $("#market_btn").on("click", function () {
+                $("#login").hide();
+                $("#register").hide();
+                $("#product_register").hide();
+                $("#market_register").show();
+            })
+
+        })
+    </script>
+</head>
+
+<body style="background-color: antiquewhite; margin: 0; padding: 0;">
+    <div
+        style="background-color: orange; width: 100%; height: 100px; margin: 0px; padding: 20px; color: white; text-align: center;">
+        <h2 style="padding: 20px; text-align: center;">상품 판매</h2>
+        
+    </div>
+    <div style="background-color: darkorange; width: 100%; margin: 0 auto; padding: 10px 20px 10px 20px; text-align: center;">
+        <a href="#login" style="text-decoration: none; color: white; text-align: center; margin: 10px;"
+            id="login_btn">로그인</a>
+        <a href="#register" style="text-decoration: none; color: white; text-align: center; margin: 10px"
+            id="register_btn">회원정보</a>
+        <a href="#product_register" style="text-decoration: none; color: white; text-align: center; margin: 10px"
+            id="product_btn">상품 등록</a>
+        <a href="#market_register" style="text-decoration: none; color: white; text-align: center; margin: 10px"
+            id="market_btn">점포 등록</a>
+
+
+    </div>
+    <form action="" class="form1" id="login">
+        <ul style="list-style: none;">
+            <h3><strong>로그인</strong></h3>
+            <li>
+                아이디
+                <br>
+                <input type="text" placeholder="아이디를 입력하세요">
+                <br>
+                비밀번호
+                <br>
+                <input type="password" placeholder="비밀번호를 입력하세요">
+                <br>
+                <input type="submit" value="로그인">
+            </li>
+        </ul>
+    </form>
+
+    <form action="" class="form1" id="register">
+        <ul style="list-style: none;">
+            <h3><strong>회원정보</strong></h3>
+            <li>
+                이름
+                <br>
+                <input type="text" placeholder="이름을을 입력하세요">
+                <br>
+                이메일
+                <br>
+                <input type="email" placeholder="이메일을 입력하세요">
+                <br>
+                전화번호
+                <br>
+                <input type="text" placeholder="전화번호를 입력하세요">
+                <br>
+                <input type="submit" value="정보수정">
+            </li>
+        </ul>
+    </form>
+
+    <form action="" class="form1" id="product_register">
+        <ul style="list-style: none;">
+            <h3><strong>상품 등록</strong></h3>
+            <li>
+                상품명
+                <br>
+                <input type="text" placeholder="상품명을을 입력하세요">
+                <br>
+                가격
+                <br>
+                <input type="password" placeholder="상품 가격을을 입력하세요">
+                <br>
+                <input type="submit" value="상품 등록">
+            </li>
+        </ul>
+    </form>
+    <form action="" class="form1" id="market_register">
+        <ul style="list-style: none;">
+            <h3><strong>점포 등록</strong></h3>
+            <li>
+                점포명
+                <br>
+                <input type="text" placeholder="점포명을 입력하세요">
+                <br>
+                위치
+                <br>
+                <input type="password" placeholder="위치를를 입력하세요">
+                <br>
+                <input type="submit" value="점포 등록">
+            </li>
+
+        </ul>
+    </form>
+    <div
+        style="background-color: burlywood; width: 100%; height: 30px; margin: 0px auto; padding: 10px; color: white; text-align: center;">
+        <small><b>&copy; 2025 상품 판매</b></small>
+    </div>
+
+
+    <br>
+
+
+    </div>
+</body>
+
+</html>

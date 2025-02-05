@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>등록정보</legend>
+            <small>참여인원 (최대10)</small><br>
+            <!--0~10 사이의 숫자만 입력-->
+            <!-- 스핀으로 숫자 증감하거나 숫자만 입력-->
+            <input type="number"><br>
+            지원물품<small>(1인당 5개)</small><br>
+            <!-- 초기값은 3이며 최소 0으로 제한을 둠 -->
+            <input type="number" value="3" min="0" step="5" max="50"><br>
+            희망단계<small>(하,중,상)</small><br>
+            <!-- 범위 형태로 움직임 -->
+            <input type="range" max="2" value="0"><br>
+            <input type="color" value="#00ffe0"><br>
+        </fieldset>
+    </form>
+</body>
+</html>

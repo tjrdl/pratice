@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 60px;
+            height: 60px;
+            margin: 60px;
+            /* 이름, 지속시간, 반복 */
+            animation: background 1.5s infinite alternate, ani1 1.5s infinite;
+        
+        }
+
+        /* animation-name과 매칭 */
+        @keyframes background {
+
+            /* 시작 시점 */
+            from {
+                background-color: yellow;
+            }
+            
+            50% {
+                background-color: aquamarine;
+            }
+
+            /* 종료 시점 */
+            to {
+                background-color: violet;
+            }
+        }
+        @keyframes ani1 {
+
+            /* 시작 시점 */
+            from {
+                transform: rotateX(0deg) rotateY(0deg) perspective(120px);
+            }
+            
+            50% {
+                transform: rotateX(-180deg) rotateY(0deg) perspective(120px);
+            }
+
+            /* 종료 시점 */
+            to {
+                transform: rotateX(-180deg) rotateY(-180deg) perspective(120px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+</body>
+
+</html>

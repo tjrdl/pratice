@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var user_Name = prompt("your name?");
+        var upper_Name = user_Name.toUpperCase();
+        
+        var user_Number = prompt("your number?");
+
+        // 마지막 4자리를 *로 처리
+        var result = user_Number.substring(0,user_Number.length-4)+"****";
+
+        document.write(upper_Name,"<br>");
+        document.write(result,"<br>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

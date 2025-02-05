@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin {
+            border: 1px solid black;
+            margin: 40px;
+            width: 300px;
+            height: 200px
+        }
+        img {
+            position: relative;
+            height: 100%;
+        }
+
+        .scalex:hover {
+            /* 가로 1.2배 확대 */
+            transform: scaleX(1.2);
+        }
+
+        .scaley:hover {
+            /* 세로 1.2배 확대 */
+            transform: scaleY(1.2);
+        }
+        .scalez:hover {
+            /* 가로, 세로 70% 축소 */
+            transform: scale(0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="origin">
+        <div class="scalex">
+            <img src="../images/fruit.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="scaley">
+            <img src="../images/fruit.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="scalez">
+            <img src="../images/fruit.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

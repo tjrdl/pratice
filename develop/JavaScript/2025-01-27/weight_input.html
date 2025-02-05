@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name = prompt("your name","JJY");
+        var height = prompt("your height",0);
+        var weight = prompt("your weight",0);
+        
+        var a = (height-100)*0.9;
+        var result = weight>a-5 && weight <= a+5;
+
+        result = result?"적정체중":"적정체중 아님";
+        document.write(result);
+        document.write(a);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

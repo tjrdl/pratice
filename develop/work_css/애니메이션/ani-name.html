@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+        }
+
+        .box1 {
+            background-color: #4cff00;
+            border: 1px solid black;
+            animation-name: shape;
+            animation-duration: 3s;
+        }
+        .box2 {
+            background-color: cyan;
+            border: 1px solid black;
+            animation-name: rotate;
+            animation-duration: 3s;
+        }
+
+        /* animation-name과 매칭 */
+        @keyframes shape {
+            /* 시작 시점 */
+            from{
+                border: 1px solid black;
+            }
+            /* 종료 시점 */
+            to{
+                border: 1px solid coral;
+                border-radius: 50% 20%;
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+                border: 1px solid black;
+            }
+            to {
+                background-color: yellow;
+                transform: rotate(45deg);
+                border: 1px solid coral;
+                border-radius: 50% 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

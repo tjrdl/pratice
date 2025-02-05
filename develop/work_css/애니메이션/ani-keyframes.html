@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: change_bg;
+            animation-duration: 3s;
+            
+        }
+        /* animation-name과 매칭 */
+        @keyframes change_bg {
+            /* 시작 시점 */
+            from{
+                background-color: aquamarine;
+                border: 1px solid black;
+            }
+            /* 종료 시점 */
+            to{
+                background-color: yellow;
+                border: 1px solid coral;
+                
+                border-radius: 50% 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

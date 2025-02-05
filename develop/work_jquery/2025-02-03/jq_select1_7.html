@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script>
+        $(function() { 
+            // .parent() : 부모(상위)요소 => ul 요소에 적용
+            // 현재 부모인 ul의 범위만큼 테두리 표시
+            $("#list_1").parent().css("border","2px dashed #f00").css("width","fit-content");
+        }); 
+    </script>
+</head>
+
+<body>
+    <h1>인접 관계 선택자</h1>
+    <ul>
+        <li>list1
+            <ul>
+                <li id="list_1">list1-1</li>
+                <li>list1-2</li>
+            </ul>
+        </li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+</body>
+
+</html>
