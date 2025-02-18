@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(a,b) {
+            return a + b;
+        }
+        console.log("@#sum1 =",sum(1,4));
+        
+        const sum2 = (a,b) => a+b; // 화살표 함수
+        console.log("@#sum2 =",sum2(1,4));
+
+        const sum3 = (a) => a+10; 
+        //const sum3 = a => a+10; // 매개변수가 한개일 경우 괄호 생략 가능
+        console.log("@#sum3 =",sum3(1));
+
+        let sum4 = (a,b) => {return a+b}; // return과 중괄호{}는 같이 선언
+        console.log("@#sum4 =",sum4(1,4));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
