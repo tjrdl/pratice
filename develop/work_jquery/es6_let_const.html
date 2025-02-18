@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 1;
+        {
+            var a = 2;
+            var b = 3;
+        }
+        var a = 3;
+        console.log("@#=> var a",a);
+        console.log("@#=> var b",b);
+        
+        let aa = 11; // 전역
+        { // 지역
+            let aa = 22;
+            let bb = 33;
+
+        }
+        console.log("@#=> let aa",aa);
+        
+        // 지역변수 bb를 찾지 못 함
+        //console.log("@#=> let bb",bb);
+        
+        const x = 1;
+        //x = 2; // const로 선언된 경우 값 변경 불가
+        console.log("@#=> const x ",x );
+        
+        const employee = {
+            name:"hong",
+            age:24
+        }
+        // employee{}: // 객체는는 변경 불가
+        // employee.name = "kim" //속성의 값은 변경 가능능
+       console.log(employee);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
