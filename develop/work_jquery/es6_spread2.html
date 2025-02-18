@@ -23,6 +23,10 @@
         
         // 가변적 매개변수는 마지막에 작성
         // sum3 = (...arr,x) => {return [...arr,x]};
+
+        //함수의 deafult매개값(마지막에 작성하는것이 바람직)
+        sum3 = (x,y=10,z=100) => {return x+y+z};
+        console.log(sum3(1));
     </script>
 </head>
 <body>
