@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const num = [1,2,3];
+
+        sum = (x,y,z) => {return x+y+z};
+        
+        //console.log(sum(1,2,3));
+        
+        //console.log(sum(...num));
+        
+        //console.log(sum(10,...num)); //10 + 1 + 2
+        
+        sum2 = (x,...arr) => {return [x,...arr]};
+        // ...arr에서 1을 받음
+        // ...arr: 가변적 매개변수
+        // console.log(sum2("홍길동",1));
+        console.log(sum2("홍길동",1,2,"hello"));
+        
+        // 가변적 매개변수는 마지막에 작성
+        // sum3 = (...arr,x) => {return [...arr,x]};
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
