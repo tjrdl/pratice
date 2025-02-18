@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let obj = {"name":"hong gill dong","age":20};
+        // console.log(obj); // json 데이터
+        // console.log(obj.name);
+        // console.log(obj["name"]);
+
+        // let {name} = obj;
+        // console.log(name); //json 데이터의 name 값
+
+        // let {name,age} = obj;
+        // console.log(name,age); //json 데이터의 name, age 값
+
+        // 가변 변수가 json 데이터를 받음
+        // let {...arr} = obj;
+        // console.log(arr); 
+
+        let person={"name":"Kim",
+            "age":30,
+            "job":["programmer","designer"],
+            "info":{"id":"kkk123","email":"namer"}
+        };
+        // let {name,age,job} = person;
+        // console.log(name,age,job);
+        
+        // "name":"Kim"의 "Kim"을 aaa로 받음
+        // let {name:aaa} = person;
+        // console.log(aaa);
+
+        let {age:aaa} = person;
+        console.log(aaa);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
