@@ -235,6 +235,64 @@
         let a6 = str4.match(/\D/g);
         document.write("@# a6=>"+a6);
         document.write("<br>");
+
+        // 정규식 실무 예제!!
+        // 1. 특정 단어로 끝나는지검사
+        const txt="index.html"; // html
+        // const txt="index.html2"; // null
+        let a11 = txt.match(/html$/g);
+        document.write("@# a11=>"+a11);
+        document.write("<br>");
+        
+        // 2. 숫자로만 이루어져 있는지 검사
+        const txt2="12345"; // 12345
+        // const txt2="12345a"; // 하나라도 숫자가 아닌게 있을경우 null
+        let a12 = txt2.match(/^\d+$/g);
+        document.write("@# a12=>"+a12);
+        document.write("<br>");
+
+        // 3. 아이디 사용 검사
+        // 알파벳 대소문자 또는 숫자로 시작하고 끝나며 4~10자리인지 검사
+        const txt3="abc1"; 
+        let a13 = txt3.match(/^[A-Za-z0-9]{4,10}/g);
+        document.write("@# a13=>"+a13);
+        document.write("<br>");
+        
+        // 4. 핸드폰 번호 형식
+        // 3자리+하이픈+3,4자리+하이픈+4자리
+        const txt4="010-2123-5678"; 
+        let a14 = txt4.match(/^\d{3}-\d{3,4}-\d{4}$/g);
+        document.write("@# a14=>"+a14);
+        document.write("<br>");
+        
+        // 5. 웹사이트 주소 형식
+        // http:// 나 https://로 시작하고, 알파벳, 하이픈, 닷으로 이루어져 있는 정규식
+        const txt5="http://dongumaster.com 010-1111-2222 02-333-7777 curryyou@aaa.com https://google.com"; 
+        let a15 = txt5.match(/https?:\/\/[\w\-\.]+/g);
+        document.write("@# a15=>"+a15);
+        document.write("<br>");
+        
+        // 6. 전화번호 형식
+        // 유선번호라면 02-111-2222 형식과 핸드폰 번호를 모두 포함하는 정규식
+        const txt6="http://dongumaster.com 010-1111-2222 02-333-7777 curryyou@aaa.com https://google.com"; 
+        let a16 = txt6.match(/\d{2,3}-\d{3,4}-\d{4}/g);
+        document.write("@# a16=>"+a16);
+        document.write("<br>");
+        
+        // 7. 이메일 형식
+        
+        const txt7="http://dongumaster.com 010-1111-2222 02-333-7777 curryyou@aaa.com https://google.com"; 
+        let a17 = txt7.match(/[\w\-\.]+\@[\w\-\.]+/g);
+        document.write("@# a17=>"+a17);
+        document.write("<br>");
+
+        // 8. 특수기호
+        // 문자와 숫자가 아닌것것
+        const txt8="abCD$94#높*ㅍ";
+        let a18 = txt8.match(/[^a-zA-z0-9가-힣ㄱ-ㅎ]+/g);
+        document.write("@# a18=>"+a18);
+        document.write("<br>");
+
         </script>
 </head>
 <body>
